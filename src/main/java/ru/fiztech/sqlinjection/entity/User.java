@@ -1,5 +1,7 @@
 package ru.fiztech.sqlinjection.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,7 +21,14 @@ public class User {
     private String password;
 
     @Column
-    private Date lastLogin;
+    private String fullName;
+
+    public User(Long id, String login, String password, String fullName) {
+        this.id = id;
+        this.login = login;
+        this.password = password;
+        this.fullName = fullName;
+    }
 
     public Long getId() {
         return id;
@@ -45,11 +54,11 @@ public class User {
         this.password = password;
     }
 
-    public Date getLastLogin() {
-        return lastLogin;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setLastLogin(Date lastLogin) {
-        this.lastLogin = lastLogin;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }
