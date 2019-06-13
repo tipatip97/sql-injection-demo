@@ -3,15 +3,12 @@ package ru.fiztech.sqlinjection.service;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import ru.fiztech.sqlinjection.entity.User;
-import ru.fiztech.sqlinjection.repository.UserRepository;
 
 @Service
 public class UserService {
-    private UserRepository userRepository;
     private JdbcTemplate jdbcTemplate;
 
-    public UserService(UserRepository userRepository, JdbcTemplate jdbcTemplate) {
-        this.userRepository = userRepository;
+    public UserService(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
