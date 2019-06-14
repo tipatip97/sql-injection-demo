@@ -13,7 +13,7 @@ public class UserService {
     }
 
     public User login(String login, String password) {
-        return jdbcTemplate.queryForObject("SELECT * FROM USER WHERE login = '" + login + "' AND password = '" + password + "'", (rs, rowNum) ->
+        return jdbcTemplate.queryForObject("SELECT * FROM USER WHERE LOGIN = '" + login + "' AND PASSWORD = '" + password + "'", (rs, rowNum) ->
                 new User(rs.getLong("id"), rs.getString("login"), rs.getString("password"), rs.getString("full_name")));
     }
 }

@@ -1,0 +1,4 @@
+CREATE TABLE USER (ID INT AUTO_INCREMENT PRIMARY KEY, LOGIN VARCHAR(45), PASSWORD varchar(45), FULL_NAME varchar(99));
+INSERT INTO USER (ID, LOGIN, PASSWORD, FULL_NAME) VALUES (1, 'pavel', 'thesecretkey', 'pavel viktorovich');
+INSERT INTO USER (ID, LOGIN, PASSWORD, FULL_NAME) VALUES (2, 'adam', 'qwerty', 'adam karpovich');
+INSERT INTO USER (ID, LOGIN, PASSWORD, FULL_NAME) VALUES (3, 'vasya', 'q1w2e3r4', 'vasya pupkin');
