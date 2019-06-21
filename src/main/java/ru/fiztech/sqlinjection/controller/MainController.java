@@ -13,7 +13,7 @@ public class MainController {
         this.databaseService = databaseService;
     }
 
-    @GetMapping("login")
+    @GetMapping(value={"", "login"})
     private String login(ModelMap model, @RequestParam(required = false) String login, @RequestParam(required = false) String password) {
         if (login != null && password != null) {
             if (databaseService.login(login, password))
